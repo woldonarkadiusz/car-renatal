@@ -1,0 +1,66 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car rental</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        table, td, th {
+            border: 1px solid black;}
+    </style>
+</head>
+<body>
+
+<h1>CAR RENTAL</h1>
+
+<c:url var="logoutUrl" value="/logout"/>
+<form action="${logoutUrl}" method="post">
+    <input type="submit" value="Logout"/>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+<table style="width:100%">
+    <tr>
+        <td><a href="/car/create">Add car</a></td>
+        <td><a href="/department/create">Add department</a></td>
+        <td><a href="/customer/create">Add customer</a></td>
+        <td><a href="/booking/create">Add booking</a></td>
+        <td><a href="/rent/create">Add rent</a></td>
+        <td><a href="/employee/create">Add employee</a></td>
+        <td><a href="/giveback/create">Add giveback</a></td>
+    </tr>
+    <tr>
+        <td><a href="/car/list">Cars</a></td>
+        <td><a href="/department/list">Departments</a></td>
+        <td><a href="/customer/list">Customers</a></td>
+        <td><a href="/booking/list">Bookings</a></td>
+        <td><a href="/rent/list">Rents</a></td>
+        <td><a href="/employee/list">Employees</a></td>
+        <td><a href="/giveback/list">Givebacks</a></td>
+    </tr>
+    <tr>
+        <td><a href="/account/list">$$</a></td>
+    </tr>
+</table><br />
+
+<%--<a href="/car/create">Add car</a> |--%>
+<%--<a href="/car/list">Cars</a> |--%>
+<%--<a href="/department/create">Add department</a> |--%>
+<%--<a href="/department/list">Departments</a> |--%>
+<%--<a href="/customer/create">Add customer</a> |--%>
+<%--<a href="/customer/list">Customers</a> |--%>
+<%--<a href="/booking/create">Add booking</a> |--%>
+<%--<a href="/booking/list">Bookings</a> |--%>
+<%--<a href="/rent/create">Add rent</a> |--%>
+<%--<a href="/rent/list">Rents</a> |--%>
+<%--<a href="/employee/create">Add employee</a> |--%>
+<%--<a href="/employee/list">Employees</a> |--%>
+<%--<a href="/giveback/create">Add giveback</a> |--%>
+<%--<a href="/giveback/list">Givebacks</a><br/><br/>--%>
+
+</body>
+</html>
